@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  color-scheme: light dark;
+
+  /* Core tokens (brand) */
+  --brand-500: #2e7d52;
+  --brand-600: #1b5e3b;
+  --brand-700: #13452b;
+
+  /* Neutrals (light) */
+  --bg: #f4f7f6;
+  --surface: #ffffff;
+  --surface-2: #f8faf7;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: rgba(15, 23, 42, 0.12);
+
+  /* Neutrals (dark) */
+  --bg-dark: #0b0f19;
+  --surface-dark: #151c2c;
+  --text-dark: #ffffff;
+  --muted-dark: #94a3b8;
+  --border-dark: rgba(255, 255, 255, 0.08);
+
+  /* Status */
+  --danger: #ff4757;
+  --warning: #e3b341;
+  --success: #00ff66;
+  --info: #00e5ff;
+
+  /* Radii / shadows */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better defaults */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Shared components (optional use across pages) */
+.ui-container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.ui-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.ui-btn {
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+}
+
+.ui-btn:active {
+  transform: scale(0.99);
+}
+
+.ui-btn-primary {
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(27, 94, 59, 0.22);
+}
+
+.ui-btn-ghost {
+  background: rgba(27, 94, 59, 0.08);
+  color: var(--brand-700);
+  border: 1px solid rgba(27, 94, 59, 0.16);
+}
+
+/* Toasts */
+.ui-toast-viewport {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(420px, calc(100vw - 32px));
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.ui-toast {
+  pointer-events: auto;
+  background: rgba(21, 28, 44, 0.92);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 12px 12px 12px 14px;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ui-toast-title {
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+
+.ui-toast-message {
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.35;
+}
+
+.ui-toast-x {
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,0.75);
+  font-size: 20px;
+  line-height: 18px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.ui-toast-x:hover { color: #fff; }
+
+.ui-toast-info { border-left: 4px solid var(--info); }
+.ui-toast-success { border-left: 4px solid var(--success); }
+.ui-toast-warning { border-left: 4px solid var(--warning); }
+.ui-toast-error { border-left: 4px solid var(--danger); }
+
+/* Modal */
+.ui-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.ui-modal {
+  width: min(520px, 100%);
+  border-radius: 18px;
+  background: rgba(21, 28, 44, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 18px;
+}
+
+.ui-modal-title {
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ui-modal-body {
+  font-size: 13px;
+}
+
+.ui-modal-footer {
+  margin-top: 16px;
+}
+

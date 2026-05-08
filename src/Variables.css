@@ -1,0 +1,72 @@
+/* ============================================================
+   Variables.css — MENRO DSS Global Design System
+   Gov-Tech Mission Control Unified Palette
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* ── BACKGROUNDS ──────────────────────────────────────── */
+  --bg-base:          #0f172a;
+  --bg-surface:       #1e293b;
+  --bg-surface-glass: #1e293b;
+  --bg-widget-glass:  #1e293b;
+  --bg-ai-card:       #1e293b;
+  --bg-sidebar:       #1e293b;
+
+  /* ── BORDERS ──────────────────────────────────────────── */
+  --border-dim:   #334155;
+  --border-color: #334155;
+
+  /* ── ACCENT PALETTE ───────────────────────────────────── */
+  --accent-primary: #10b981;   /* Gov-Tech Emerald — primary */
+  --accent-neon:    #10b981;   /* Emerald (replaces old neon green) */
+  --accent-cyan:    #34d399;   /* Light Emerald (replaces old cyan) */
+  --accent-purple:  #8b5cf6;   /* AI / Predictive nodes */
+  --active-bg:      rgba(16, 185, 129, 0.12);
+
+  /* ── STATUS ───────────────────────────────────────────── */
+  --danger:       #ef4444;
+  --state-danger: #ef4444;
+  --state-warning:#f59e0b;
+  --state-success:#10b981;
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────── */
+  --text-primary:   #f1f5f9;
+  --text-secondary: #b0bec5;
+  --nav-text:       #cbd5e1;
+
+  /* ── SHADOWS & EFFECTS ────────────────────────────────── */
+  --card-shadow:  0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --backdrop-blur: none;
+  --shadow-glow:  none;
+  --glow-cyan:    none;
+  --glow-danger:  none;
+  --glow-neon:    none;
+  --glow-purple:  none;
+
+  /* ── MISC ─────────────────────────────────────────────── */
+  --input-bg:    #0f172a;
+  --glass-bg:    rgba(255, 255, 255, 0.04);
+  --glass-hover: rgba(255, 255, 255, 0.07);
+  --map-bg:      #0f172a;
+
+  /* ── PREMIUM EASING ───────────────────────────────────── */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── LEGACY ALIASES (Citizen Portal compatibility) ────── */
+  --primary:    #10b981;
+  --secondary:  #34d399;
+  --bg:         #f8fafc;
+  --card-bg:    #ffffff;
+  --text-main:  #0f172a;
+  --text-muted: #64748b;
+  --border:     #e2e8f0;
+  --mint:       #ecfdf5;
+  --shadow:     0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
